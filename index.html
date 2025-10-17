@@ -3,21 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>To Do List</title>
 
     <!-- Link to the external CSS file -->
     <link rel="stylesheet" href="css\style.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
 <body>
     <!-- header section -->
-    <<header> </header>
+    <header> </header>
+    <h1 class="text-3xl font-bold">Here's what Riska's should Do</h1>
 
     <!-- main content -->
     <main> </main>
+    <section class="input-section my-4">
+        <input type="text" class="border rounded p-2" id="task-input" placeholder="Add a new task...">
+        <input type="date" class="border rounded p-2" id="task-date" placeholder="Select due date...">
+        <button class="bg-pink-500 text-white p-2 ml-2 rounded" id="priority-button">Set Priority</button>
+        <button class="bg-blue-500 text-white p-2 ml-2 rounded" onclick="addTask();">Add Task</button>
+
+    </section>
+
+    <!-- action button section-->
+    <section class="flex justify-left my-4 mb-4">
+        <button class="bg-blue-500 text-white p-2 ml-2 rounded" onclick="sortByDueDate()">Sort by Due Date</button>
+        <button class="bg-pink-500 text-white p-2 ml-2 rounded" id="show-priority-button">Show Priority Tasks</button>
+        <button class="bg-grey-500 text-white p-2 ml-2 rounded" onclick="deleteAllTasks()">Delete All Tasks</button>
+    </section>
+
+    <section class="task-list-section">
+        <h2 class="text-2xl">List Of Task</h2>
+        <ul id="task-list">
+            <li>no task list added yet</li>
+        </ul>
+    </section>
 
     <!-- footer Section -->
     <footer></footer>
+    <p class="text-sm">&copy; 2025 adelriska</p>
 
 
     <!-- Javascript external file -->
